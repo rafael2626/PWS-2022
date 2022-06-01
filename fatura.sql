@@ -1,6 +1,6 @@
 create database fatura ;
 use  fatura ;
-create table user 
+create table users
 (
 
 iduser int(2)  not null auto_increment primary key,
