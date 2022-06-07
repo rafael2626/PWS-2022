@@ -4,32 +4,27 @@ require_once './models/Auth.php';
 
 class RegistoController extends  BaseAuthController
 {
-    public function fazRegisto()
+    public function store()
     {
-        $user = new User;
-        if (isset($_POST['username'], $_POST['password'],$_POST['email'],
-            $_POST['telefone'],$_POST['nif'],$_POST['morada'],$_POST['codigopostal'],$_POST['localidade']))
+        $user = new User();
+        $user->username = $_POST['username'];
+        $user->password = $_POST['password'];
+//        if (isset($_POST['username'], $_POST['password'],$_POST['email'],
+//            $_POST['telefone'],$_POST['nif'],$_POST['morada'],$_POST['codigopostal'],$_POST['localidade']))
 
             if ($user->is_valid()) {
                 $user->save();
-                $this->redirectToRoute('login','getlogin');
+                $this->redirectToRoute('login','index');
             } else {
-                $this->redirectToRoute('login','getregisto', ['user' => $user]);
+                $this->renderView("registo/create", ['registo' => $user]);
             }
 
     }
 
 
-    public function getRegisto()
-    {
-
-        $this->redirectToRoute('login','registo');
-    }
-
     public function create()
     {
-
-        $registo = User::all();
+        $registo = new User();
         $this->renderView("registo/create", ['registo' => $registo]);
     }
 }

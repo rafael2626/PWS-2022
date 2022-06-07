@@ -40,6 +40,10 @@ if (!isset($_GET['c'], $_GET['a'])) {
                 case "create":
                     $controller->create();
                     break;
+
+                case "store":
+                    $controller->store();
+                    break;
             }
             break;
         case "fatura":

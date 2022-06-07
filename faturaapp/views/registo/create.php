@@ -11,9 +11,9 @@
                 ?>
                 <br>
                 <br>
-                <form action="router.php?c=login&a=index" method="post" >
+                <form action="router.php?c=registo&a=store" method="post" >
                     <label for="username">Username</label>
-                    <input class="form-control" type="text" id="username" name="username"><br>
+                    <input class="form-control" type="text" id="username" name="username" value="<?= $registo->username ?>"><br>
                     <?= isset($registo->errors) ? $registo->errors->on('username') : '' ?>
 
                     <label for="password">Password</label>
@@ -53,7 +53,7 @@
                     <br>
 
 
-                    <a href="./router.php?c=login&a=index"><button class="btn btn-danger">Registar Funcionario</button></a>
+                    <button class="btn btn-danger" type="submit">Registar Funcionario</button>
                 </form>
             </div>
             <div class="col"></div>
