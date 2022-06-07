@@ -6,47 +6,45 @@ require_once './controllers/PlanoController.php';
 require_once './controllers/BookController.php';
 require_once './controllers/FaturaController.php';
 require_once './controllers/ChapterController.php';
-require_once './controllers/UserController.php';
+require_once './controllers/AdminController.php';
+require_once './controllers/RegistoController.php';
 require_once './controllers/ErrorController.php';
 
-if(!isset($_GET['c'], $_GET['a']))
-{
+if (!isset($_GET['c'], $_GET['a'])) {
     // omissão, enviar para site
     $controller = new SiteController();
     $controller->index();
-}
-else
-{
+} else {
     // existem parametros definidos
     $c = $_GET['c'];
     $a = $_GET['a'];
 
-    switch ($c)
-    {
-        case "registo":
-            $controller = new UserController();
-            switch ($a)
-            {
-                case "registo":
-                    $controller->registo();
-                    break;
-
-                case "login":
-                    $controller->login();
+    switch ($c) {
+        case "login":
+            $controller = new LoginController();
+            switch ($a) {
+                case "index":
+                    $controller->index();
                     break;
 
                 case "logout":
                     $controller->logout();
-
+                    break;
                 default:
                     $controller->index();
             }
             break;
-
+        case "registo":
+            $controller = new RegistoController();
+            switch ($a) {
+                case "create":
+                    $controller->create();
+                    break;
+            }
+            break;
         case "fatura":
             $controller = new FaturaController();
-            switch ($a)
-            {
+            switch ($a) {
                 case "index":
                     $controller->index();
                     break;
@@ -63,10 +61,9 @@ else
             $controller->index();
             break;
 
-        case "book":
-            $controller = new BookController();
-            switch ($a)
-            {
+        case "admin":
+            $controller = new AdminController();
+            switch ($a) {
                 case "index":
                     $controller->index();
                     break;
@@ -102,8 +99,7 @@ else
 
         case "chapter":
             $controller = new ChapterController();
-            switch($a)
-            {
+            switch ($a) {
                 case "index":
                     $controller->index($_GET['id']);
                     break;
@@ -136,15 +132,11 @@ else
 
         case "error":
             $controller = new ErrorController();
-            switch($a)
-            {
+            switch ($a) {
                 case "index":
-                    if(isset($_GET['callbackRoute']))
-                    {
+                    if (isset($_GET['callbackRoute'])) {
                         $controller->index($_GET['callbackRoute']);
-                    }
-                    else
-                    {
+                    } else {
                         $controller->index(null);
                     }
                     break;
@@ -155,5 +147,4 @@ else
             $controller = new SiteController();
             $controller->index();
     }
-
 }

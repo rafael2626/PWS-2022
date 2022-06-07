@@ -31,7 +31,7 @@ class User extends \ActiveRecord\Model
     );
 
     static $validates_inclusion_of = array(
-        array('role', 'in' => array ('administrador', 'funcionario', 'cliente'))
+        array('role', 'in' => array ('admin', 'funcionario', 'cliente'))
     );
 
     static $validates_numericality_of = array(

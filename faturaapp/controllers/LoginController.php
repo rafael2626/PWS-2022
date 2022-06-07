@@ -4,7 +4,7 @@ require_once './models/Auth.php';
 
 class LoginController extends BaseController
 {
-    public function doLogin()
+    public function Login()
     {
         if (isset($_POST['username'], $_POST['password'])) {
             $auth = new Auth();
@@ -24,21 +24,13 @@ class LoginController extends BaseController
                         $this->redirectToRoute('login', 'getlogin');
                 }
         }
+
     }
-       public function fazRegisto()
-        {
+    public  function  index()
+    {
 
-
-            $user = new User(Post::getAll());
-       'fazer de todos os dados'
-
-
-                if ($user->is_valid()) {
-                    $user->save();
-                    $this->redirectToRoute('login','getlogin');
-                } else {
-                    $this->redirectToRoute('login','getregisto', ['user' => $user]);
-                 }
-
-        }
+        $login = User::all();
+        $this->renderView("login/index", ['users' => $login]);
     }
+
+}
