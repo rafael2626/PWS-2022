@@ -9,7 +9,9 @@ class Auth
 
     public function checkLogin($username, $password)
     {
+        // $user = User::find(['username' => $username, 'password' => $password]);
         if ($username == "joao" && $password == "1234") {
+            // $_SESSION['role'] = $user->role;
             $_SESSION['nome'] = $username;
             return true;
         } else {
