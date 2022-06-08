@@ -109,37 +109,7 @@ if (!isset($_GET['c'], $_GET['a'])) {
             }
             break;
 
-        case "chapter":
-            $controller = new ChapterController();
-            switch ($a) {
-                case "index":
-                    $controller->index($_GET['id']);
-                    break;
 
-                case "show":
-                    $controller->show($_GET['id']);
-                    break;
-
-                case "create":
-                    $controller->create($_GET['id']);
-                    break;
-
-                case "edit":
-                    $controller->edit($_GET['id']);
-                    break;
-
-                case "update":
-                    $controller->update($_GET['id']);
-                    break;
-
-                case "store":
-                    $controller->store();
-                    break;
-                case "destroy":
-                    $controller->destroy($_GET['id']);
-                    break;
-            }
-            break;
 
         case 'produtos':
             $controller = new  ProdutosController();

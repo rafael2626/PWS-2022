@@ -3,17 +3,28 @@
         <div class="row mt-5">
             <div class="col">
                 <h3>Editar livro</h3>
-                <form action="./router.php?c=book&a=update&id=<?= $book->id ?>" method="post">
-                    <label for="nome">Nome do Livro: </label>
-                    <input type="text" name="nome" id="nome" class="form-control" value="<?= $book->nome ?>" autocomplete="false">
-                    <?= isset($book->errors) ? $book->errors->on('nome') : '' ?>
+                <form action="./router.php?c=fatura&a=update&id=<?= $fatura->id ?>" method="post">
+                    <label for="data">Data da Fatura </label>
+                    <input type="text" name="data" id="data" class="form-control" value="<?= $fatura->data ?>"
+                    <?= isset($fatura->errors) ? ($fatura->errors)->on('data') : '' ?>
 
-                    <label for="isbn">ISBN: </label>
-                    <input type="text" name="isbn" id="isbn" class="form-control" maxlength="13" value="<?= $book->isbn ?>" autocomplete="false">
-                    <?= isset($book->errors) ? $book->errors->on('isbn') : '' ?>
+                    <label for="iva">Valor IVA: </label>
+                    <input type="text" name="iva" id="iva" class="form-control"  value="<?= $fatura->isbn ?>"
+                    <?= isset($fatura->errors) ? $fatura->errors->on('iva') : '' ?>
 
-                    <label for="genre_id">Genero</label>
-                    <select name="genre_id" id="genre_id" class="form-control">
+                    <label for="total">Total</label>
+                    <input type="text" name="total" id="total" class="form-control"  value="<?= $fatura->total ?>"
+                    <?= isset($fatura->errors) ? $fatura->errors->on('total') : '' ?>
+
+
+                    <label for="ivatotal">Valor IVA: </label>
+                    <input type="text" name="ivatotal" id="ivatotal" class="form-control"  value="<?= $fatura->ivatotal ?>"
+                    <?= isset($fatura->errors) ? $fatura->errors->on('ivatotal') : '' ?>
+
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" class="form-control"  value="<?= $fatura->estado ?>"
+                    <?= isset($fatura->errors) ? $fatura->errors->on('estado') : '' ?>
+
                         <?php
                         foreach($genre as $g)
                         {

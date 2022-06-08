@@ -1,4 +1,4 @@
-<?php require_once './views/layout/header.php'; ?>
+<?php require_once './views/layout/adminheader.php'; ?>
 <div class="container">
     <div class="row">
         <div class="col"></div>

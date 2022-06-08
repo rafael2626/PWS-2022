@@ -52,8 +52,8 @@
                     <?php foreach ($users as $user) { ?>
                         <tr>
 
-                            <td><?=$user->iduser?></td>
-                            <td><?=$user->idempresa?></td>
+                            <td><?=$user->id?></td>
+                            <td><?=$user->empresa_id?></td>
                             <td><?=$user->username?></td>
                             <td><?=$user->password?></td>
                             <td><?=$user->email?></td>

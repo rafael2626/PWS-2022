@@ -7,12 +7,12 @@ class AdminController extends  BaseAuthController
 
     public  function  index()
     {
-        $admin = user::all();
+        $admin = User::all();
         $this->renderView("admin/index", ['users' => $admin]);
     }
     public  function  create()
     {
-        $admin = user::all();
+        $admin = User::all();
         $this->renderView("admin/create", ['users' => $admin]);
     }
     public function store()
@@ -77,8 +77,8 @@ class AdminController extends  BaseAuthController
     {
         $this->loginFilter();
         try{
-            $book = Book::find([$id]);
-            if($book->delete())
+            $admin = User::find([$id]);
+            if($admin->delete())
             {
                 $this->redirectToRoute("admin", "index");
             }
@@ -94,6 +94,48 @@ class AdminController extends  BaseAuthController
         catch(Exception $other)
         {
             header("HTTP/1.1 500 Internal Server Error");
+        }
+    }
+    public function show($id)
+    {
+        $this->loginFilter();
+
+        try{
+            $admin = User::find([$id]);
+            $this->renderView("admin/show", ['admin' => $admin]);
+        }
+        catch (RecordNotFound $ex)
+        {
+            $this->redirectToRoute("error", "index", ['callbackRoute' => 'admin/index']);
+        }
+    }
+    public function destroy($id)
+    {
+
+        try
+        {
+            $admin =User::find([$id]);
+
+            // Obter o id do livro associado para depois poder enviar o utilizador para a lista de capítulos correta
+            $admin = $admin->id;
+
+            if($admin->delete())
+            {
+                $this->redirectToRoute("admin", "index", ["id" => $admin]);
+            }
+            else
+            {
+                // Erro ao apagar
+            }
+        }
+        catch (RecordNotFound $ex)
+        {
+            header("HTTP/1.0 404 Not Found");
+            $this->renderView("chapter/show", ["admin" => null]);
+        }
+        catch (Exception $other)
+        {
+            header("HTTP/1.0 500 Internal Server Error");
         }
     }
 }

@@ -4,7 +4,7 @@
         <h2 class="top-space"></h2>
         <div class="row">
             <div class="col-sm-6">
-                <h3>Create a new Book</h3>
+                <h3>Cria Nova Fatura</h3>
                 <p>
                     <a href="router.php?c=fatura&a=create" class="btn btn-info" role="button">New</a>
                 </p>
@@ -32,12 +32,6 @@
                         <th>
                             <h6>estado</h6>
                         </th>
-                        <th>
-                            <h6>refenciacliente</h6>
-                        </th>
-                        <th>
-                            <h6>refenciafuncionario</h6>
-                        </th>
                     </thead>
                     <tbody>
                     <?php foreach ($faturas as $fatura) { ?>
@@ -49,16 +43,13 @@
                             <td><?=$fatura->ivatotal?></td>
                             <td><?=$fatura->data?></td>
                             <td><?=$fatura->estado?></td>
-                            <td><?=$fatura->refenciacliente?></td>
-                            <td><?=$fatura->refenciafuncionario?></td>
-
                             <td>
 
 
-                                <a href="router.php?c=fatura&a=index&id=<?=$fatura->id?>" class="btn btn-info" role="button">Chapters</a>
-                                <a href="router.php?c=book&a=show&id=<?=$fatura->id ?>" class="btn btn-info" role="button">Show</a>
-                                <a href="router.php?c=book&a=edit&id=<?=$fatura->id ?>" class="btn btn-info" role="button">Edit</a>
-                                <a href="router.php?c=book&a=destroy&id=<?=$fatura->id ?>" class="btn btn-warning" role="button">Delete</a>
+                                <a href="router.php?c=fatura&a=index&id=<?=$fatura->id?>" class="btn btn-info" role="button">Faturas</a>
+                                <a href="router.php?c=fatura&a=show&id=<?=$fatura->id ?>" class="btn btn-info" role="button">Show</a>
+                                <a href="router.php?c=fatura&a=edit&id=<?=$fatura->id ?>" class="btn btn-info" role="button">Edit</a>
+                                <a href="router.php?c=fatura&a=destroy&id=<?=$fatura->id ?>" class="btn btn-warning" role="button">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>

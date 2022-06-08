@@ -13,8 +13,8 @@
                     <?= isset($fatura->errors) ? $fatura ->errors->on('total') : '' ?>
 
                    <label for="IVATotal">IVATotal: </label>
-                    <input type="text" name="IVATotal" id="IVATotal" class="form-control" maxlength="13" autocomplete="false">
-                    <?= isset($fatura->errors) ? $fatura->errors->on('IVATotal') : '' ?>
+                    <input type="text" name="ivatotal" id="ivatotal" class="form-control" maxlength="13" autocomplete="false">
+                    <?= isset($fatura->errors) ? $fatura->errors->on('ivatotal') : '' ?>
 
 
                     <label for="data">data:</label>
@@ -35,9 +35,9 @@
                 <br>
                 <br>
                 <br>
-                    <input type="submit" class="btn btn-success mt-2" value="Criar Fatura">
+                <a href="router.php?c=admin&a=index"><button class="btn btn-danger">Registar Funcionario</button></a>
 
-                <a href="./router.php?c=book&a=index"><button class="btn btn-danger">Cancelar</button></a>
+                <a href="./router.php?c=admin&a=index"><button class="btn btn-danger">Cancelar</button></a>
             </div>
         </div>
     </div>
