@@ -98,7 +98,7 @@ class AdminController extends  BaseAuthController
     }
     public function show($id)
     {
-        $this->loginFilter();
+
 
         try{
             $admin = User::find([$id]);
