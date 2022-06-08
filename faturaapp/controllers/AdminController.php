@@ -38,8 +38,8 @@ class AdminController extends  BaseAuthController
 
         try{
             $admin = User::find([$id]);
-            $admin = User::all();
-            $this->renderView("admin/edit", ['users' => $admin]);
+
+            $this->renderView("admin/edit", ['admin' => $admin]);
         }
         catch (RecordNotFound $ex)
         {
@@ -52,18 +52,18 @@ class AdminController extends  BaseAuthController
     {
         $this->loginFilter();
         try{
-            $book = Book::find([$id]);
-            $book->update_attributes($_POST);
+            $admin = User::find([$id]);
+            $admin->update_attributes($_POST);
 
-            if($book->is_valid())
+            if($admin->is_valid())
             {
-                $book->save();
+                $admin->save();
                 $this->redirectToRoute("admin", "index");
             }
             else
             {
-                $genre = Genre::all();
-                $this->renderView("admin/edit", ["admin" => $book, "genre" => $genre]);
+
+                $this->renderView("admin/edit", ["admin" => $admin]);
             }
         }
         catch (RecordNotFound $ex)
