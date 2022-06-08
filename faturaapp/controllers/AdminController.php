@@ -1,5 +1,6 @@
 <?php
 require_once './controllers/BaseController.php';
+require_once './controllers/BaseAuthController.php';
 
 class AdminController extends  BaseAuthController
 {
@@ -38,12 +39,12 @@ class AdminController extends  BaseAuthController
         try{
             $admin = User::find([$id]);
             $admin = User::all();
-            $this->renderView("book/edit", ['book' => $admin]);
+            $this->renderView("admin/edit", ['users' => $admin]);
         }
         catch (RecordNotFound $ex)
         {
             header("HTTP/1.1 404 Not Found");
-            $this->renderView("book/show", ['book' => null]); // usar mesmo o do “show” porque faz a mesma coisa
+            $this->renderView("admin/show", ['admin' => null]);
         }
     }
 
@@ -57,18 +58,18 @@ class AdminController extends  BaseAuthController
             if($book->is_valid())
             {
                 $book->save();
-                $this->redirectToRoute("book", "index");
+                $this->redirectToRoute("admin", "index");
             }
             else
             {
                 $genre = Genre::all();
-                $this->renderView("book/edit", ["book" => $book, "genre" => $genre]);
+                $this->renderView("admin/edit", ["admin" => $book, "genre" => $genre]);
             }
         }
         catch (RecordNotFound $ex)
         {
             header("HTTP/1.1 404 Not Found");
-            $this->renderView("book/show", ['book' => null]); // usar mesmo o do “show” porque faz a mesma coisa
+            $this->renderView("admin/show", ['admin' => null]); // usar mesmo o do “show” porque faz a mesma coisa
         }
     }
 
@@ -79,17 +80,16 @@ class AdminController extends  BaseAuthController
             $book = Book::find([$id]);
             if($book->delete())
             {
-                $this->redirectToRoute("book", "index");
+                $this->redirectToRoute("admin", "index");
             }
             else
             {
-                // Não foi possível apagar
             }
         }
         catch (RecordNotFound $ex)
         {
             header("HTTP/1.1 404 Not Found");
-            $this->renderView("book/show", ['book' => null]); // usar o “show” porque mostra o erro
+            $this->renderView("admin/show", ['admin' => null]); // usar o “show” porque mostra o erro
         }
         catch(Exception $other)
         {

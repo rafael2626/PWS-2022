@@ -1,4 +1,4 @@
-<?php require_once './views/layout/header.php'; ?>
+<?php require_once './views/layout/funcheader.php'; ?>
     <div class="container">
         <div class="row mt-5">
             <div class="col">

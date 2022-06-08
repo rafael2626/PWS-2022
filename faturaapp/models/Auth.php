@@ -9,9 +9,9 @@ class Auth
 
     public function checkLogin($username, $password)
     {
-        // $user = User::find(['username' => $username, 'password' => $password]);
+        $user = User::find(['username' => $username, 'password' => $password]);
         if ($username == "joao" && $password == "1234") {
-            // $_SESSION['role'] = $user->role;
+            $_SESSION['role'] = $user->role;
             $_SESSION['nome'] = $username;
             return true;
         } else {
@@ -36,27 +36,4 @@ class Auth
         }
         return null;
     }
-
-      public function setAuthData($userId, $userRole)
-    {
-        $_SESSION('APP_USER_ID', $userId);
-        $_SESSION('APP_USER_ROLE', $userRole);
-    }
-
-
-    static  public function isUserLoggedIn()
-    {
-        return $_SESSION('APP_USER_ID');
-    }
-
-    static   public function getLoggedRole()
-    {
-            return $_SESSION('APP_USER_ROLE');
-    }
-
-    static public function getLoggedId()
-
-        {
-            return (isset($_SESSION['APP_USER_ID']));
-        }
 }

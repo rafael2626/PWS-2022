@@ -1,4 +1,4 @@
-x<?php
+<?php
 require_once './vendor/autoload.php';
 define('APP_NAME', 'faturaapp');
 define('INVALID_ACCESS_ROUTE', 'c=login&a=index');

@@ -2,16 +2,19 @@
 require_once './controllers/BaseController.php';
 require_once './models/Auth.php';
 
-class RegistoController extends  BaseAuthController
+class RegistoController extends  BaseController
 {
     public function store()
     {
         $user = new User();
         $user->username = $_POST['username'];
         $user->password = $_POST['password'];
-//        if (isset($_POST['username'], $_POST['password'],$_POST['email'],
-//            $_POST['telefone'],$_POST['nif'],$_POST['morada'],$_POST['codigopostal'],$_POST['localidade']))
-
+        $user->email = $_POST['email'];
+        $user->telefone = $_POST['telefone'];
+        $user->nif = $_POST['nif'];
+        $user->morada = $_POST['morada'];
+        $user->codigopostal = $_POST['codigopostal'];
+        $user->localidade = $_POST['localidade'];
             if ($user->is_valid()) {
                 $user->save();
                 $this->redirectToRoute('login','index');
@@ -27,4 +30,5 @@ class RegistoController extends  BaseAuthController
         $registo = new User();
         $this->renderView("registo/create", ['registo' => $registo]);
     }
+
 }

@@ -1,5 +1,5 @@
-<?php require_once './views/layout/header.php'; ?>
-    <div class="container">
+<?php require_once './views/layout/funcheader.php'; ?>
+<div class="container">
         <div class="row">
             <div class="col mt-2">
                 <?php

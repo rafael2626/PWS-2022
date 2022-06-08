@@ -14,7 +14,7 @@ class BaseController
             $username = $auth->getUsername();
         }
 
-        require_once './views/layout/header.php';
+
         require_once './views/' . $view . '.php';
         require_once './views/layout/footer.php';
     }

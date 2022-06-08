@@ -27,7 +27,7 @@
                     else
                     {
                         ?>
-                        <a class="nav-link" href="./router.php?c=registo&a=registo">Registar</a>
+                        <a class="nav-link" href="./router.php?c=registo&a=create">Registar</a>
                         <?php
                     }
                     ?>
@@ -37,10 +37,9 @@
                 {
                     ?>
                     <li>
-                        <a class="nav-link" href="./router.php?c=plano&a=index">Plano Pagamentos</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./router.php?c=book&a=index">Livros</a>
+
                     </li>
                     <?php
                 }
