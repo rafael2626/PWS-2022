@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col mt-2">
             <?php
-            if(is_null($user))
+            if(is_null($admin))
             {
                 ?>
                 <p>Fatura não entcontrada</p>
@@ -12,11 +12,8 @@
             else
             {
                 ?>
-                ID do user: <?= $user->id ?><br>
-                Data da Fatura: <?= $user->data ?><br>
-                Valor Total: <?= $user->total ?><br>
-                Iva Total: <?= $user->ivatotal ?>
-                Estado: <?= $user->estado ?>
+                ID do user: <?= $admin->id ?><br>
+                Data da Fatura: <?= $admin->username ?><br>
                 <?php
             }
             ?>
