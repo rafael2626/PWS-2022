@@ -1,6 +1,6 @@
 <?php require_once './views/layout/funcheader.php'; ?>
     <div class="container">
-        <h2 class="text-left top-space">Book Index</h2>
+        <h2 class="text-left top-space">fatura Index</h2>
         <h2 class="top-space"></h2>
         <div class="row">
             <div class="col-sm-6">

@@ -1,4 +1,4 @@
-<?php require_once './views/layout/adminheader.php'; ?>
+<?php require_once './views/layout/funcheader.php'; ?>
     <div class="container">
         <h2 class="text-left top-space">User Index</h2>
         <h2 class="top-space"></h2>

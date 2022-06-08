@@ -58,7 +58,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clientes
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Criar Cliente</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=admin&a=index">Ver Cliente</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=admin&a=create">Criar Cliente</a></li>
                     </ul>
                     </a>
                 </li>
@@ -66,7 +67,9 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Produtos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Criar Produtos</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=produtos&a=create">Criar Produtos</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=produtos&a=index">Consultar Produtos</a></li>
+
                     </ul>
                     </a>
                 </li>

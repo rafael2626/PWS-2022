@@ -1,4 +1,4 @@
-<?php require_once './views/layout/header.php'; ?>
+<?php require_once './views/layout/funcheader.php'; ?>
     <table class="table tablestriped"><thead><th><h3>Id</h3></th><th><h3>Name</h3></th><th><h3>Use
             r Actions</h3></th></thead>
     <tbody>

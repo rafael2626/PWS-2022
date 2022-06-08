@@ -27,7 +27,7 @@
                     else
                     {
                         ?>
-                        <a class="nav-link" href="./router.php?c=registo&a=create">Registar</a>
+                        <a class="nav-link" href="./router.php?c=fatura&a=index">Cliente</a>
                         <?php
                     }
                     ?>
@@ -49,7 +49,7 @@
                         Gestao de Funcinários
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Criar Funcionários</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=registo&a=create">Criar Funcionários</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>

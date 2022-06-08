@@ -115,15 +115,15 @@ if (!isset($_GET['c'], $_GET['a'])) {
             $controller = new  ProdutosController();
             switch ($a) {
                 case "index":
-                    $controller->index($_GET['id']);
+                    $controller->index();
                     break;
 
                 case "show":
-                    $controller->show($_GET['id']);
+                    $controller->show();
                     break;
 
                 case "create":
-                    $controller->create($_GET['id']);
+                    $controller->create();
                     break;
 
                 case "edit":
