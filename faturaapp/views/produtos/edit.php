@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col">
-                <h3>Editar livro</h3>
+                <h3>Editar produto</h3>
                 <form action="./router.php?c=produtos&a=update&id=<?= $produtos->id ?>" method="post">
                     <label for="referencia">Referencia do produto </label>
                     <input type="text" name="referencia" id="referencia" class="form-control" value="<?= $produtos->referencia ?>"
