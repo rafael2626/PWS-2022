@@ -17,9 +17,7 @@ class Produto extends Model
 
     );
 
-    static $validates_inclusion_of = array(
-        array('role', 'in' => array ('admin', 'funcionario', 'cliente'))
-    );
+    
 
     static $validates_numericality_of = array(
         array('stock', 'only_integer' => true),

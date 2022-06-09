@@ -113,8 +113,8 @@ if (!isset($_GET['c'], $_GET['a'])) {
 
 
 
-        case 'produto':
-            $controller = new  ProdutoController();
+        case 'produtos':
+            $controller = new  ProdutosController();
             switch ($a) {
                 case "index":
                     $controller->index();
