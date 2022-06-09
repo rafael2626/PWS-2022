@@ -17,8 +17,6 @@ class Produto extends Model
 
     );
 
-    
-
     static $validates_numericality_of = array(
         array('stock', 'only_integer' => true),
         array('referencia', 'only_integer' => true)

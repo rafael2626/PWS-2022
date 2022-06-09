@@ -1,6 +1,5 @@
 <?php
 use ActiveRecord\RecordNotFound;
-require_once './controllers/BaseController.php';
 
 class ProdutosController  extends  BaseAuthController
 

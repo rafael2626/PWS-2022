@@ -37,7 +37,7 @@
                     <?php foreach ($produtos as $produto) { ?>
                         <tr>
 
-                            <td><?=$produto->idproduto?></td>
+                            <td><?=$produto->id?></td>
                             <td><?=$produto->referencia?></td>
                             <td><?=$produto->descricao?></td>
                             <td><?=$produto->stock?></td>
@@ -46,10 +46,10 @@
                             <td>
 
 
-                                <a href="router.php?c=produto&a=index&id=<?=$produto->id?>" class="btn btn-info" role="button">Produtos</a>
-                                <a href="router.php?c=produto&a=show&id=<?=$produto->id ?>" class="btn btn-info" role="button">Show</a>
-                                <a href="router.php?c=produto&a=edit&id=<?=$produto->id ?>" class="btn btn-info" role="button">Edit</a>
-                                <a href="router.php?c=produto&a=destroy&id=<?=$produto->id ?>" class="btn btn-warning" role="button">Delete</a>
+                                <a href="router.php?c=produtos&a=index&id=<?=$produto->id?>" class="btn btn-info" role="button">Produtos</a>
+                                <a href="router.php?c=produtos&a=show&id=<?=$produto->id ?>" class="btn btn-info" role="button">Show</a>
+                                <a href="router.php?c=produtos&a=edit&id=<?=$produto->id ?>" class="btn btn-info" role="button">Edit</a>
+                                <a href="router.php?c=produtos&a=destroy&id=<?=$produto->id ?>" class="btn btn-warning" role="button">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
