@@ -2,17 +2,17 @@
 use ActiveRecord\RecordNotFound;
 require_once './controllers/BaseController.php';
 
-class ProdutosController  extends  BaseController
+class ProdutosController  extends  BaseAuthController
 
 {
     public function index()
     {
-        $produtos = Produto::all();
-        $this->renderView("produtos/index", ['produtos' => $produtos]);
+        $produto = Produto::all();
+        $this->renderView("produtos/index", ['produtos' => $produto]);
     }
     public  function  create()
     {
-        $produto = Fatura::all();
+        $produto = Produto::all();
         $this->renderView("produtos/create", ["produtos" => $produto]);
     }
 

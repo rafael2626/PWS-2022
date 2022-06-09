@@ -6,6 +6,8 @@ require_once './controllers/FaturaController.php';
 require_once './controllers/AdminController.php';
 require_once './controllers/FuncionarioController.php';
 require_once './controllers/RegistoController.php';
+require_once './controllers/ProdutosController.php';
+
 require_once './controllers/ErrorController.php';
 
 if (!isset($_GET['c'], $_GET['a'])) {
