@@ -6,7 +6,7 @@ require_once './controllers/FaturaController.php';
 require_once './controllers/AdminController.php';
 require_once './controllers/FuncionarioController.php';
 require_once './controllers/RegistoController.php';
-require_once './controllers/ProdutosController.php';
+require_once './controllers/ProdutoController.php';
 
 require_once './controllers/ErrorController.php';
 
@@ -113,8 +113,8 @@ if (!isset($_GET['c'], $_GET['a'])) {
 
 
 
-        case 'produtos':
-            $controller = new  ProdutosController();
+        case 'produto':
+            $controller = new  ProdutoController();
             switch ($a) {
                 case "index":
                     $controller->index();
