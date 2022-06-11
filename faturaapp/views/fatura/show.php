@@ -13,20 +13,16 @@
                     {
                         ?>
                         ID da Fatura: <?= $fatura->id ?><br>
-                        Password<?= $fatura->password ?><br>
-                        Email <?= $fatura->email ?><br>
-                        Telefone <?= $fatura->telefone ?><br>
-                        NIF <?= $fatura->nif ?>
-                        Morada: <?= $fatura->morada ?>
-                        Codigopostal <?= $fatura->codigopostal ?>
-                        Localidade <?= $fatura->localidade ?>
-                        Role <?= $fatura->role ?>
-
+                        Valor: <?= $fatura->valor?><br>
+                        Total : <?= $fatura->total?><br>
+                        Iva Total:  <?= $fatura->ivatotal?><br>
+                        Data:<?= $fatura->data?><br>
+                        Estado:<?= $fatura->estado?><br>
                         <?php
                     }
                 ?>
             </div>
         </div>
-        <a href="./router.php?c=book&a=index"><- Voltar</a>
+        <a href="./router.php?c=fatura&a=index"><- Voltar</a>
     </div>
 <?php require_once './views/layout/footer.php'; ?>

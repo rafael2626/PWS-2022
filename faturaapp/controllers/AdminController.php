@@ -1,7 +1,6 @@
 <?php
 require_once './controllers/BaseController.php';
 require_once './controllers/BaseAuthController.php';
-
 class AdminController extends  BaseAuthController
 {
 
@@ -12,27 +11,9 @@ class AdminController extends  BaseAuthController
     }
     public  function  create()
     {
-        $admin = User::all();
-        $this->renderView("admin/create", ['users' => $admin]);
+        $admin = new User();
+        $this->renderView("admin/create", ['registo' => $admin]);
     }
-    public function store()
-    {
-        $this->loginFilter();
-
-        $admin = new user($_POST);
-
-        if($admin->is_valid())
-        {
-            $admin->save();
-            $this->redirectToRoute("admin", "index");
-        }
-        else
-        {
-            $admin =User::all();
-            $this->renderView("admin/create", ["users" => $admin]);
-        }
-    }
-
     public function edit($id)
     {
 
@@ -50,7 +31,7 @@ class AdminController extends  BaseAuthController
 
     public function update($id)
     {
-        $this->loginFilter();
+
         try{
             $admin = User::find([$id]);
             $admin->update_attributes($_POST);
@@ -75,7 +56,7 @@ class AdminController extends  BaseAuthController
 
     public function delete($id)
     {
-        $this->loginFilter();
+
         try{
             $admin = User::find([$id]);
             if($admin->delete())
@@ -114,7 +95,7 @@ class AdminController extends  BaseAuthController
 
         try
         {
-            $admin =User::find([$id]);
+            $admin = User::find([$id]);
 
             // Obter o id do livro associado para depois poder enviar o utilizador para a lista de capítulos correta
             $admin = $admin->id;
@@ -131,11 +112,13 @@ class AdminController extends  BaseAuthController
         catch (RecordNotFound $ex)
         {
             header("HTTP/1.0 404 Not Found");
-            $this->renderView("chapter/show", ["admin" => null]);
+            $this->renderView("admin/show", ["admin" => null]);
         }
         catch (Exception $other)
         {
             header("HTTP/1.0 500 Internal Server Error");
         }
     }
+
+
 }

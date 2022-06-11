@@ -1,4 +1,4 @@
-<?php require_once './views/layout/header.php'; ?>
+<?php require_once './views/layout/funcheader.php'; ?>
     <div class="container">
         <h2 class="text-left top-space">Book Index</h2>
         <h2 class="top-space"></h2>
@@ -6,7 +6,7 @@
             <div class="col-sm-6">
                 <h3>Create a new Book</h3>
                 <p>
-                    <a href="router.php?c=fatura&a=create" class="btn btn-info" role="button">New</a>
+                    <a href="router.php?c=funcionario&a=create" class="btn btn-info" role="button">New</a>
                 </p>
             </div>
         </div>
@@ -15,50 +15,52 @@
                 <table class="table tablestriped">
                     <thead>
                         <th>
-                            <h6>idfatura</h6>
+                            <h6>id</h6>
                         </th>
                         <th>
-                            <h6>valor</h6>
+                            <h6>empresa_id</h6>
                         </th>
                         <th>
-                            <h6>total</h6>
+                            <h6>username</h6>
                         </th>
                         <th>
-                            <h6>IVATotal</h6>
+                            <h6>password</h6>
                         </th>
                         <th>
-                            <h6>Data</h6>
+                            <h6>email</h6>
                         </th>
                         <th>
-                            <h6>estado</h6>
+                            <h6>telefone</h6>
                         </th>
                         <th>
-                            <h6>refenciacliente</h6>
+                            <h6>nif</h6>
                         </th>
                         <th>
-                            <h6>refenciafuncionario</h6>
+                            <h6>morada</h6>
                         </th>
                     </thead>
                     <tbody>
-                    <?php foreach ($faturas as $fatura) { ?>
+                    <?php foreach ($users as $user) { ?>
                         <tr>
 
-                            <td><?=$fatura->idfatura?></td>
-                            <td><?=$fatura->valor?></td>
-                            <td><?=$fatura->total?></td>
-                            <td><?=$fatura->ivatotal?></td>
-                            <td><?=$fatura->data?></td>
-                            <td><?=$fatura->estado?></td>
-                            <td><?=$fatura->refenciacliente?></td>
-                            <td><?=$fatura->refenciafuncionario?></td>
+                            <td><?=$user->id?></td>
+                            <td><?=$user->empresa_id?></td>
+                            <td><?=$user->username?></td>
+                            <td><?=$user->password?></td>
+                            <td><?=$user->email?></td>
+                            <td><?=$user->telefone?></td>
+                            <td><?=$user->nif?></td>
+                            <td><?=$user->morada?></td>
+                            <td><?=$user->codigopostal?></td>
+                            <td><?=$user->localidade?></td>
+                            <td><?=$user->role?></td>
+                        <td>
 
-                            <td>
 
-
-                                <a href="router.php?c=fatura&a=index&id=<?=$fatura->id?>" class="btn btn-info" role="button">Chapters</a>
-                                <a href="router.php?c=book&a=show&id=<?=$fatura->id ?>" class="btn btn-info" role="button">Show</a>
-                                <a href="router.php?c=book&a=edit&id=<?=$fatura->id ?>" class="btn btn-info" role="button">Edit</a>
-                                <a href="router.php?c=book&a=destroy&id=<?=$fatura->id ?>" class="btn btn-warning" role="button">Delete</a>
+                                <a href="router.php?c=funcionario&a=index&id=<?=$user->id?>" class="btn btn-info" role="button">Chapters</a>
+                                <a href="router.php?c=funcionario&a=show&id=<?=$user->id ?>" class="btn btn-info" role="button">Show</a>
+                                <a href="router.php?c=funcionario&a=edit&id=<?=$user->id ?>" class="btn btn-info" role="button">Edit</a>
+                                <a href="router.php?c=funcionario&a=destroy&id=<?=$user->id ?>" class="btn btn-warning" role="button">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>

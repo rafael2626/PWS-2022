@@ -37,7 +37,7 @@
                     <?php foreach ($faturas as $fatura) { ?>
                         <tr>
 
-                            <td><?=$fatura->idfatura?></td>
+                            <td><?=$fatura->id?></td>
                             <td><?=$fatura->valor?></td>
                             <td><?=$fatura->total?></td>
                             <td><?=$fatura->ivatotal?></td>

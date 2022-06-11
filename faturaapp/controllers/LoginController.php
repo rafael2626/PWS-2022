@@ -4,14 +4,14 @@ require_once './models/Auth.php';
 
 class LoginController extends BaseController
 {
-    public function Login()
+    public function login()
     {
         if (isset($_POST['username'], $_POST['password'])) {
             $auth = new Auth();
             if ($auth->checkLogin($_POST['username'], $_POST['password']))
 
-                switch ($auth) {
-                    case 'administrador':
+                switch ($auth->getRole()) {
+                    case 'admin':
                         $this->redirectToRoute('admin', 'index');
                         break;
                     case 'funcionario':
@@ -31,6 +31,12 @@ class LoginController extends BaseController
 
         $login = User::all();
         $this->renderView("login/index", ['users' => $login]);
+    }
+    public function logout()
+    {
+        $auth = new Auth();
+        $auth->logout();
+        $this->redirectToRoute('site', 'index');
     }
 
 }

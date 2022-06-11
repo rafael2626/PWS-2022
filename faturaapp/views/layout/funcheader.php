@@ -58,10 +58,10 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clientes
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./router.php?c=admin&a=index">Ver Cliente</a></li>
-                        <li><a class="dropdown-item" href="./router.php?c=admin&a=create">Criar Cliente</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=funcionario&a=index">Ver Cliente</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=funcionario&a=create">Criar Cliente</a></li>
                     </ul>
-                    </a>
+
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Produtos
@@ -71,7 +71,7 @@
                         <li><a class="dropdown-item" href="./router.php?c=produtos&a=index">Consultar Produtos</a></li>
 
                     </ul>
-                    </a>
+
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empresa
@@ -85,9 +85,18 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Taxas e Ivas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Taxa e Ivas</a></li>
+                        <li><a class="dropdown-item" href="#">Taxas e Ivas</a></li>
                     </ul>
                     </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Atualizar Dados
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./router.php?c=funcionario&a=show">Ver Cliente</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=funcionario&a=create">Criar Cliente</a></li>
+                    </ul>
+
                 </li>
             </ul>
         </div>

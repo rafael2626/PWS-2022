@@ -10,15 +10,19 @@ class Auth
     public function checkLogin($username, $password)
     {
         $user = User::find(['username' => $username, 'password' => $password]);
-        if ($username == "joao" && $password == "1234") {
+        if ($user) {
             $_SESSION['role'] = $user->role;
-            $_SESSION['nome'] = $username;
+            $_SESSION['username'] = $username;
             return true;
         } else {
             return false;
         }
     }
 
+    public function getRole()
+    {
+        return $_SESSION['role'];
+    }
     public function isLoggedIn()
     {
         return isset($_SESSION['nome']);
@@ -28,7 +32,6 @@ class Auth
     {
         session_destroy();
     }
-
     public function getUsername()
     {
         if (isset($_SESSION['nome'])) {

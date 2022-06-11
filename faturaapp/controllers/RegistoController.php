@@ -15,6 +15,7 @@ class RegistoController extends  BaseController
         $user->morada = $_POST['morada'];
         $user->codigopostal = $_POST['codigopostal'];
         $user->localidade = $_POST['localidade'];
+        $user->role = $_POST['role'];
             if ($user->is_valid()) {
                 $user->save();
                 $this->redirectToRoute('login','index');

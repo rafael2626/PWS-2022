@@ -14,17 +14,48 @@
 
 
                     <label for="isbn">Password</label>
-                    <input type="text" name="password" id="password" class="form-control" maxlength="13" value="<?= $admin->password ?>" autocomplete="false">
+                    <input type="text" name="password" id="password" class="form-control" value="<?= $admin->password ?>" autocomplete="false">
                     <?= isset($admin->errors) ? $admin->errors->on('password') : '' ?>
 
-                    <label for="genre_id">email</label>
-                    <select name="genre_id" id="genre_id" class="form-control">
+
+                    <label for="Email">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" value="<?= $admin->email ?>" autocomplete="false">
+                    <?= isset($admin->errors) ? $admin->errors->on('email') : '' ?>
 
 
-                        <input type="submit" class="btn btn-success mt-2" value="Guardar Livro">
+
+                    <label for="isbn">Telefone</label>
+                    <input type="number" name="telefone" id="telefone" class="form-control" value="<?= $admin->telefone ?>"
+                    <?= isset($admin->errors) ? $admin->errors->on('telefone') : '' ?>
+
+
+
+                    <label for="nif">NIF</label>
+                    <input type="number" name="nif" id="nif" class="form-control" value="<?= $admin->nif ?>"
+                    <?= isset($admin->errors) ? $admin->errors->on('nif') : '' ?>
+
+
+
+
+
+                    <label for="morada">Morada</label>
+                    <input type="text" name="morada" id="morada" class="form-control" value="<?= $admin->morada ?>"
+                    <?= isset($admin->errors) ? $admin->errors->on('morada') : '' ?>
+
+                    <label for="codigopostal">CodigoPostal</label>
+                    <input type="text" name="codigopostal" id="codigopostal" class="form-control" value="<?= $admin->codigopostal ?>"
+                    <?= isset($admin->errors) ? $admin->errors->on('codigopostal') : '' ?>
+
+
+                    <label for="localidade">Localidade</label>
+                    <input type="text" name="localidade" id="localidade" class="form-control" value="<?= $admin->localidade ?>"
+                    <?= isset($admin->errors) ? $admin->errors->on('localidade') : '' ?>
+
                 </form>
+                <input type="submit" class="btn btn-success mt-2" value="Guardar Funcionário">
                 <br>
-                <a href="./router.php?c=book&a=index"><button class="btn btn-danger">Cancelar</button></a>
+                <br>
+                <a href="./router.php?c=admin&a=index"><button class="btn btn-info">Cancelar</button></a>
             </div>
         </div>
     </div>

@@ -17,6 +17,7 @@
                     <a class="nav-link active" aria-current="page" href="./router.php">Home</a>
                 </li>
                 <li class="nav-item">
+
                     <?php
                     if(isset($username))
                     {
@@ -26,9 +27,7 @@
                     }
                     else
                     {
-                        ?>
-                        <a class="nav-link" href="./router.php?c=fatura&a=index">Cliente</a>
-                        <?php
+                       
                     }
                     ?>
                 </li>

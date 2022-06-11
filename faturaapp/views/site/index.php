@@ -1,4 +1,4 @@
-<?php require_once './views/layout/funcheader.php'; ?>
+<?php require_once './views/layout/adminheader.php'; ?>
 <body>
     <div class="container-fluid">
         <div class="row">

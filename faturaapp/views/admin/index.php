@@ -1,4 +1,4 @@
-<?php require_once './views/layout/funcheader.php'; ?>
+<?php require_once './views/layout/adminheader.php'; ?>
     <div class="container">
         <h2 class="text-left top-space">User Index</h2>
         <h2 class="top-space"></h2>
@@ -6,7 +6,7 @@
             <div class="col-sm-6">
                 <h3>Create a User</h3>
                 <p>
-                    <a href="router.php?c=admin&a=create" class="btn btn-info" role="button">New</a>
+                    <a href="router.php?c=registo&a=create" class="btn btn-info" role="button">New</a>
                 </p>
             </div>
         </div>
@@ -65,8 +65,6 @@
                             <td><?=$user->role?></td>
                             <td>
 
-
-                                <a href="router.php?c=admin&a=index&id=<?=$user->id?>" class="btn btn-info" role="button">Users</a>
                                 <a href="router.php?c=admin&a=show&id=<?=$user->id ?>" class="btn btn-info" role="button">Show</a>
                                 <a href="router.php?c=admin&a=edit&id=<?=$user->id ?>" class="btn btn-info" role="button">Edit</a>
                                 <a href="router.php?c=admin&a=destroy&id=<?=$user->id ?>" class="btn btn-warning" role="button">Delete</a>

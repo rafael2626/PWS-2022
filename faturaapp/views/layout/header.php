@@ -30,6 +30,7 @@
                             <a class="nav-link" href="./router.php?c=registo&a=registo">Registar</a>
                             <?php
                         }
+
                     ?>
                 </li>
                 <?php
