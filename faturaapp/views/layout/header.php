@@ -27,7 +27,7 @@
                         else
                         {
                             ?>
-                            <a class="nav-link" href="./router.php?c=registo&a=registo">Registar</a>
+                            <a class="nav-link" href="./router.php?c=login&a=index">Login</a>
                             <?php
                         }
 
