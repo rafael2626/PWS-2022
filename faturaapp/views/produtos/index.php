@@ -1,10 +1,10 @@
 <?php require_once './views/layout/funcheader.php'; ?>
     <div class="container">
-        <h2 class="text-left top-space">Book Index</h2>
+        <h2 class="text-left top-space">Produtos</h2>
         <h2 class="top-space"></h2>
         <div class="row">
             <div class="col-sm-6">
-                <h3>Cria Novo Produto</h3>
+                <h3>Criar Novo Produto</h3>
                 <p>
                     <a href="router.php?c=produtos&a=create" class="btn btn-info" role="button">New</a>
                 </p>

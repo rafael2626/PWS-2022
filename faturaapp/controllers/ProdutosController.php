@@ -52,4 +52,4 @@ class ProdutosController  extends  BaseAuthController
         }
     }
 
-}
+} 

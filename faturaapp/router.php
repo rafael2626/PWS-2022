@@ -7,6 +7,7 @@ require_once './controllers/AdminController.php';
 require_once './controllers/FuncionarioController.php';
 require_once './controllers/RegistoController.php';
 require_once './controllers/ProdutosController.php';
+require_once './controllers/TaxasController.php';
 
 require_once './controllers/ErrorController.php';
 
@@ -185,6 +186,40 @@ if (!isset($_GET['c'], $_GET['a'])) {
                     break;
             }
             break;
+
+        case 'taxas':
+            $controller = new  TaxasController();
+            switch ($a) {
+                case "index":
+                    $controller->index();
+                    break;
+
+                case "show":
+                    $controller->show();
+                    break;
+
+                case "create":
+                    $controller->create();
+                    break;
+
+                case "edit":
+                    $controller->edit($_GET['id']);
+                    break;
+
+                case "update":
+                    $controller->update($_GET['id']);
+                    break;
+
+                case "store":
+                    $controller->store();
+                    break;
+
+                case "destroy":
+                    $controller->destroy($_GET['id']);
+                    break;
+            }
+            break;
+
         case "error":
             $controller = new ErrorController();
             switch ($a) {
