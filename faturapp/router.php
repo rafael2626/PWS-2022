@@ -8,9 +8,7 @@ require_once './controllers/FuncionarioController.php';
 require_once './controllers/RegistoController.php';
 require_once './controllers/ProdutoController.php';
 require_once './controllers/LinhafaturaController.php';
-
 require_once './controllers/IvaController.php';
-
 require_once './controllers/ErrorController.php';
 
 if (!isset($_GET['c'], $_GET['a'])) {

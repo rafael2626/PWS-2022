@@ -1,14 +1,13 @@
 <?php
 use ActiveRecord\RecordNotFound;
 
-class ProdutoController  extends  BaseAuthController
+class ProdutoController  extends  BaseController
 
 {
     public function index()
     {
-
-        $produto = Produto::all();
-        $this->renderView("produto/index", ['produtos' => $produto]);
+        $produtos = Produto::all();
+        $this->renderView("produto/index", ['produtos' => $produtos]);
     }
     public  function  create()
     {
@@ -17,22 +16,21 @@ class ProdutoController  extends  BaseAuthController
     }
     public function store()
     {
-
-
-        $produto = new Produto($_POST);
+        $produto = new Produto();
 
         $produto->referencia = $_POST['referencia'];
-
-        if($produto->is_valid())
-        {
+        $produto->descricao = $_POST['descricao'];
+        $produto->stock = $_POST['stock'];
+        $produto->preco = $_POST['preco'];
+        if ($produto->is_valid()) {
             $produto->save();
-            $this->redirectToRoute("produto", "index");
+            $this->redirectToRoute('produto','index');
+        } else {
+            $this->renderView("produto/create", ['produto' => $produto]);
         }
-        else
-        {
-            $produto = Produto::all();
-            $this->renderView("produto/create", ["produto" => $produto]);
-        }
+
+
+
     }
 
     public function edit($id)

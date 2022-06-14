@@ -6,7 +6,7 @@
             <div class="col-sm-6">
                 <h3>Criar Novo Produto</h3>
                 <p>
-                    <a href="router.php?c=produtos&a=create" class="btn btn-info" role="button">New</a>
+                    <a href="router.php?c=produto&a=create" class="btn btn-info" role="button">New</a>
                 </p>
             </div>
         </div>

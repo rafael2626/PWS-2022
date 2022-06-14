@@ -9,7 +9,7 @@ class FuncionarioController extends  BaseController
     public  function  index()
     {
         $funcionario = User::all();
-        $this->renderView("funcionario/index", ['users' => $funcionario]);
+        $this->renderView("funcionario/index", ['funcionario' => $funcionario]);
     }
     public  function  create()
     {

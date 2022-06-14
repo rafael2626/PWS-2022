@@ -6,7 +6,7 @@
                 <h3>Registar novo produto</h3>
                 <br>
                 <label for="referencia">Referencia</label>
-                <input type="text" name="referencia" id="referencia" class="form-control"
+                <input type="text" name="referencia" id="referencia" class="form-control" value="<?=$produto->username?>"
                 <?= isset($produto->errors) ? $produto->errors->on('referencia') : '' ?>
 
                 <label for="total">Descrição </label>
