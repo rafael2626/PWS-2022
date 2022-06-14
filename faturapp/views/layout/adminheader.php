@@ -75,8 +75,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Produtos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./router.php?c=produtos&a=create">Criar Produtos</a></li>
-                        <li><a class="dropdown-item" href="./router.php?c=produtos&a=index">Consultar Produtos</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=produto&a=create">Criar Produtos</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=produto&a=index">Consultar Produtos</a></li>
 
                     </ul>
 

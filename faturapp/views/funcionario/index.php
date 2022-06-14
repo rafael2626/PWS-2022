@@ -40,7 +40,7 @@
                         </th>
                     </thead>
                     <tbody>
-                    <?php foreach ($users as $user) { ?>
+                    <?php foreach ($funcionario as $user) { ?>
                         <tr>
 
                             <td><?=$user->id?></td>

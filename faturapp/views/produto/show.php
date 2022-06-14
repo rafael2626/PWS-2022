@@ -6,27 +6,23 @@
             if(is_null($produto))
             {
                 ?>
-                <p>Produto não entcontrado</p>
+                <p>Produto não encontrado</p>
                 <?php
             }
             else
             {
                 ?>
-                ID da Fatura: <?= $produto->id ?><br>
-                Password<?= $produto->password ?><br>
-                Email <?= $produto->email ?><br>
-                Telefone <?= $produto->telefone ?><br>
-                NIF <?= $produto->nif ?>
-                Morada: <?= $produto->morada ?>
-                Codigopostal <?= $produto->codigopostal ?>
-                Localidade <?= $produto->localidade ?>
-                Role <?= $produto->role ?>
+                Id do produto: <?= $produto->id ?><br>
+                Referência: <?= $produto->referencia ?><br>
+                Descrição: <?= $produto->descricao ?><br>
+                Stock: <?= $produto->stock ?><br>
+                Preço: <?= $produto->preco ?>
 
                 <?php
             }
             ?>
         </div>
     </div>
-    <a href="./router.php?c=produtos&a=index"><- Voltar</a>
+    <a href="./router.php?c=produto&a=index"><- Voltar</a>
 </div>
 <?php require_once './views/layout/footer.php'; ?>

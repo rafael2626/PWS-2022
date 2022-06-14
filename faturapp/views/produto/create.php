@@ -6,7 +6,7 @@
                 <h3>Registar novo produto</h3>
                 <br>
                 <label for="referencia">Referencia</label>
-                <input type="text" name="referencia" id="referencia" class="form-control" value="<?=$produto->username?>"
+                <input type="text" name="referencia" id="referencia" class="form-control"
                 <?= isset($produto->errors) ? $produto->errors->on('referencia') : '' ?>
 
                 <label for="total">Descrição </label>
@@ -26,8 +26,7 @@
                 <br>
                 <br>
                 <input type="submit" class="btn btn-success mt-2" value="Criar Produto">
-
-                <a href="./router.php?c=produto&a=index"><button class="btn btn-danger">Cancelar</button></a>
+                    <a href="./router.php?c=produto&a=index">Cancelar</a>
                 </form>
             </div>
         </div>
