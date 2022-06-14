@@ -20,7 +20,7 @@
                 <input class="form-control" type="password" id="password" name="password"><br>
                 <?= isset($registo->errors) ? $registo->errors->on('password') : '' ?>
                 <br>
-               <button type="submit" class="btn btn-danger">Registar Funcionario</button>
+               <button type="submit" class="btn btn-danger">Entrar</button>
 
             </form>
         </div>
