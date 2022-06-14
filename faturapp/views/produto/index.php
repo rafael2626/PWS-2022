@@ -1,8 +1,20 @@
 <?php require_once './views/layout/funcheader.php'; ?>
+        <style>
+            table {
+
+                width: 320px;
+                padding: 10px;
+                border: 5px solid gray;
+                margin: 0;
+            }
+        </style>
+
     <div class="container">
+
         <h2 class="text-left top-space">Produtos</h2>
         <h2 class="top-space"></h2>
         <div class="row">
+
             <div class="col-sm-6">
                 <h3>Criar Novo Produto</h3>
                 <p>
@@ -11,6 +23,7 @@
             </div>
         </div>
         <div class="row">
+
             <div class="col-sm-12">
                 <table class="table tablestriped">
                     <thead>
@@ -53,6 +66,7 @@
                             </td>
                         </tr>
                     <?php } ?>
+
                     </tbody>
                 </table>
             </div>
