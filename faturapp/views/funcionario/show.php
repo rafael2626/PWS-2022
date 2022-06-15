@@ -28,6 +28,6 @@
             ?>
         </div>
     </div>
-    <a href="./router.php?c=admin&a=index"><- Voltar</a>
+    <a href="./router.php?c=funcionario&a=index"><- Voltar</a>
 </div>
 <?php require_once './views/layout/footer.php'; ?>
