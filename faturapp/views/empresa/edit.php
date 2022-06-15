@@ -12,18 +12,18 @@
                     <input type="text" name="email" id="email" class="form-control"  value="<?= $empresa->email ?>"
                     <?= isset($empresa->errors) ? $empresa->errors->on('email') : '' ?>
 
-                    <label for="Stock">Stock</label>
-                    <input type="text" name="stock" id="stock" class="form-control"  value="<?= $empresa->stock ?>"
-                    <?= isset($empresa->errors) ? $empresa->errors->on('stock') : '' ?>
+                    <label for="telefone">Stock</label>
+                    <input type="text" name="telefone" id="sttelefoneock" class="form-control"  value="<?= $empresa->telefone ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('telefone') : '' ?>
 
 
-                    <label for="preco">Preço </label>
-                    <input type="text" name="preco" id="preco" class="form-control"  value="<?= $empresa->preco ?>"
-                    <?= isset($empresa->errors) ? $empresa->errors->on('preco') : '' ?>
+                    <label for="nif">Preço </label>
+                    <input type="text" name="nif" id="nif" class="form-control"  value="<?= $empresa->nif ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('nif') : '' ?>
 
-                    <label for="iva_id">Iva</label>
-                    <input type="text" name="iva_id" id="iva_id" class="form-control"  value="<?= $empresa->iva_id ?>"
-                    <?= isset($empresa->errors) ? $empresa->errors->on('iva_id') : '' ?>
+                    <label for="morada">Iva</label>
+                    <input type="text" name="morada" id="morada" class="form-control"  value="<?= $empresa->morada ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('morada') : '' ?>
 
 
                     </select>

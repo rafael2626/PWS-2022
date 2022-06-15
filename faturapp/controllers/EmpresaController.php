@@ -43,7 +43,7 @@ class EmpresaController  extends  BaseController
         try{
             $empresa = Empresa::find([$id]);
 
-            $this->renderView("empresa/edit", ['empresa' => $empresas]);
+            $this->renderView("empresa/edit", ['empresa' => $empresa]);
         }
         catch (RecordNotFound $ex)
         {
