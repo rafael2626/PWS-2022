@@ -83,7 +83,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Taxas e Ivas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./router.php?c=taxas&a=index">Taxas e Ivas</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=iva&a=index">Taxas e Ivas</a></li>
                     </ul>
                     </a>
                 </li>

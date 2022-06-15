@@ -229,7 +229,7 @@ if (!isset($_GET['c'], $_GET['a'])) {
                     break;
 
                 case "show":
-                    $controller->show();
+                    $controller->show($_GET['id']);
                     break;
 
                 case "create":

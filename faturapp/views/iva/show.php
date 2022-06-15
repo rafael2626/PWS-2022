@@ -3,24 +3,24 @@
         <div class="row">
             <div class="col mt-2">
                 <?php
-                if(is_null($taxa))
+                if(is_null($iva))
                 {
                     ?>
-                    <p>Taxa não entcontrada</p>
+                    <p>Taxa não encontrada</p>
                     <?php
                 }
                 else
                 {
                     ?>
-                    ID da Taxa: <?= $taxa->id ?><br>
-                    Percentagem<?= $taxa->percentagem ?><br>
-                    Descricao <?= $taxa->descricao ?><br>
-                    Vigor <?= $taxa->vigor ?><br>
+                    ID da Taxa: <?= $iva->id ?><br>
+                    Percentagem<?= $iva->percentagem ?><br>
+                    Descricao <?= $iva->descricao ?><br>
+                    Vigor <?= $iva->vigor ?><br>
                     <?php
                 }
                 ?>
             </div>
         </div>
-        <a href="./router.php?c=taxas&a=index"><- Voltar</a>
+        <a href="./router.php?c=iva&a=index"><- Voltar</a>
     </div>
 <?php require_once './views/layout/footer.php'; ?>

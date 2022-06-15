@@ -7,29 +7,29 @@ class IvaController  extends  BaseController
     public function index()
     {
 
-        $taxa = Iva::all();
-        $this->renderView("iva/index", ['iva' => $taxa]);
+        $iva = Iva::all();
+        $this->renderView("iva/index", ['iva' => $iva]);
     }
     public  function  create()
     {
-        $taxa = new Iva();
-        $this->renderView("iva/create", ["iva" => $taxa]);
+        $iva = new Iva();
+        $this->renderView("iva/create", ["iva" => $iva]);
     }
     public function store()
     {
 
 
-        $taxa = new Iva($_POST);
+        $iva = new Iva($_POST);
 
-        if($taxa->is_valid())
+        if($iva->is_valid())
         {
-            $taxa->save();
+            $iva->save();
             $this->redirectToRoute("iva", "index");
         }
         else
         {
-            $taxa =Iva::all();
-            $this->renderView("iva/create", ["iva" => $taxa]);
+            $iva =Iva::all();
+            $this->renderView("iva/create", ["iva" => $iva]);
         }
     }
 
@@ -37,9 +37,9 @@ class IvaController  extends  BaseController
     {
 
         try{
-            $taxa = Iva::find([$id]);
+            $iva = Iva::find([$id]);
 
-            $this->renderView("iva/edit", ['iva' => $taxa]);
+            $this->renderView("iva/edit", ['iva' => $iva]);
         }
         catch (RecordNotFound $ex)
         {
@@ -52,18 +52,18 @@ class IvaController  extends  BaseController
     {
 
         try{
-            $taxa = Iva::find([$id]);
-            $taxa->update_attributes($_POST);
+            $iva = Iva::find([$id]);
+            $iva->update_attributes($_POST);
 
-            if($taxa->is_valid())
+            if($iva->is_valid())
             {
-                $taxa->save();
+                $iva->save();
                 $this->redirectToRoute("iva", "index");
             }
             else
             {
 
-                $this->renderView("iva/edit", ["iva" => $taxa]);
+                $this->renderView("iva/edit", ["iva" => $iva]);
             }
         }
         catch (RecordNotFound $ex)
@@ -77,8 +77,8 @@ class IvaController  extends  BaseController
     {
 
         try{
-            $taxa = Iva::find([$id]);
-            if($taxa->delete())
+            $iva = Iva::find([$id]);
+            if($iva->delete())
             {
                 $this->redirectToRoute("iva", "index");
             }
@@ -98,11 +98,9 @@ class IvaController  extends  BaseController
     }
     public function show($id)
     {
-
-
         try{
-            $taxa = Iva::find([$id]);
-            $this->renderView("iva/show", ['iva' => $taxa]);
+            $iva = Iva::find([$id]);
+            $this->renderView("iva/show", ['iva' => $iva]);
         }
         catch (RecordNotFound $ex)
         {
@@ -114,15 +112,15 @@ class IvaController  extends  BaseController
 
         try
         {
-            $taxa =Iva::find([$id]);
+            $iva =Iva::find([$id]);
 
 
             // Obter o id do livro associado para depois poder enviar o utilizador para a lista de capítulos correta
-            $taxa = $taxa->id;
+            $taxa = $iva->id;
 
-            if($taxa->delete())
+            if($iva->delete())
             {
-                $this->redirectToRoute("iva", "index", ["id" => $taxa]);
+                $this->redirectToRoute("iva", "index", ["id" => $iva]);
             }
             else
             {

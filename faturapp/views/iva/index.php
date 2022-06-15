@@ -6,7 +6,7 @@
             <div class="col-sm-6">
                 <h3>Cria Nova Taxa</h3>
                 <p>
-                    <a href="router.php?c=taxas&a=create" class="btn btn-info" role="button">New</a>
+                    <a href="router.php?c=iva&a=create" class="btn btn-info" role="button">New</a>
                 </p>
             </div>
         </div>
@@ -28,20 +28,20 @@
                     </th>
                     </thead>
                     <tbody>
-                    <?php foreach ($taxas as $taxa) { ?>
+                    <?php foreach ($iva as $iva) { ?>
                         <tr>
 
-                            <td><?=$taxa->id?></td>
-                            <td><?=$taxa->percentagem?></td>
-                            <td><?=$taxa->descricao?></td>
-                            <td><?=$taxa->vigor?></td>
+                            <td><?=$iva->id?></td>
+                            <td><?=$iva->percentagem?></td>
+                            <td><?=$iva->descricao?></td>
+                            <td><?=$iva->vigor?></td>
                             <td>
 
 
-                                <a href="router.php?c=taxas&a=index&id=<?=$taxa->id?>" class="btn btn-info" role="button">Taxas</a>
-                                <a href="router.php?c=taxas&a=show&id=<?=$taxa->id ?>" class="btn btn-info" role="button">Show</a>
-                                <a href="router.php?c=taxas&a=edit&id=<?=$taxa->id ?>" class="btn btn-info" role="button">Edit</a>
-                                <a href="router.php?c=taxas&a=destroy&id=<?=$taxa->id ?>" class="btn btn-warning" role="button">Delete</a>
+                                <a href="router.php?c=iva&a=index&id=<?=$iva->id?>" class="btn btn-info" role="button">Taxas</a>
+                                <a href="router.php?c=iva&a=show&id=<?=$iva->id ?>" class="btn btn-info" role="button">Show</a>
+                                <a href="router.php?c=iva&a=edit&id=<?=$iva->id ?>" class="btn btn-info" role="button">Edit</a>
+                                <a href="router.php?c=iva&a=destroy&id=<?=$iva->id ?>" class="btn btn-warning" role="button">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
