@@ -75,7 +75,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Empresa
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Configurar Dados da Empresa</a></li>
+                        <li><a class="dropdown-item"href="./router.php?c=empresa&a=index">Configurar Dados da Empresa</a></li>
                     </ul>
                     </a>
                 </li>

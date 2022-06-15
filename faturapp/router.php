@@ -9,6 +9,7 @@ require_once './controllers/RegistoController.php';
 require_once './controllers/ProdutoController.php';
 require_once './controllers/LinhafaturaController.php';
 require_once './controllers/IvaController.php';
+require_once './controllers/EmpresaController.php';
 require_once './controllers/ErrorController.php';
 
 if (!isset($_GET['c'], $_GET['a'])) {
@@ -229,6 +230,39 @@ if (!isset($_GET['c'], $_GET['a'])) {
 
                 case "show":
                     $controller->show();
+                    break;
+
+                case "create":
+                    $controller->create();
+                    break;
+
+                case "edit":
+                    $controller->edit($_GET['id']);
+                    break;
+
+                case "update":
+                    $controller->update($_GET['id']);
+                    break;
+
+                case "store":
+                    $controller->store();
+                    break;
+
+                case "destroy":
+                    $controller->destroy($_GET['id']);
+                    break;
+            }
+            break;
+
+        case 'empresa':
+            $controller = new  EmpresaController();
+            switch ($a) {
+                case "index":
+                    $controller->index();
+                    break;
+
+                case "show":
+                    $controller->show($_GET['id']);
                     break;
 
                 case "create":
