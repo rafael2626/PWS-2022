@@ -13,6 +13,7 @@ class Auth
         if ($user) {
             $_SESSION['role'] = $user->role;
             $_SESSION['username'] = $username;
+            $_SESSION['id']=$user->id;
             return true;
         } else {
             return false;
@@ -23,9 +24,15 @@ class Auth
         return $_SESSION['role'];
     }
 
+    public function  getId()
+    {
+        return $_SESSION['id'];
+
+    }
+
     public function isLoggedIn()
     {
-        return isset($_SESSION['nome']);
+        return isset($_SESSION['username']);
     }
 
     public function logout()
@@ -35,8 +42,8 @@ class Auth
 
     public function getUsername()
     {
-        if (isset($_SESSION['nome'])) {
-            return $_SESSION['nome'];
+        if (isset($_SESSION['username'])) {
+            return $_SESSION['username'];
         }
         return null;
     }

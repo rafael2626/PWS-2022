@@ -12,6 +12,7 @@ class BaseController
         if($auth->isLoggedIn())
         {
             $username = $auth->getUsername();
+            $id=$auth->getId();
         }
 
 

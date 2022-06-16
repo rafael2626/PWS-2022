@@ -10,7 +10,7 @@ require_once './controllers/ProdutoController.php';
 require_once './controllers/LinhafaturaController.php';
 require_once './controllers/IvaController.php';
 require_once './controllers/ClienteController.php';
-
+require_once './controllers/BaseController.php';
 require_once './controllers/EmpresaController.php';
 require_once './controllers/ErrorController.php';
 
@@ -78,6 +78,7 @@ if (!isset($_GET['c'], $_GET['a'])) {
                 case "destroy":
                     $controller->delete($_GET['id']);
                     break;
+
                 default:
                     $controller->index();
             }
