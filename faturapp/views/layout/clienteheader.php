@@ -49,10 +49,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="./router.php?c=fatura&a=index">Ver faturas</a></li>
-                        <li><a class="dropdown-item" href="#">asd action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+
                 </li>
             </ul>
         </div>

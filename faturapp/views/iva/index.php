@@ -38,7 +38,6 @@
                             <td>
 
 
-                                <a href="router.php?c=iva&a=index&id=<?=$iva->id?>" class="btn btn-info" role="button">Taxas</a>
                                 <a href="router.php?c=iva&a=show&id=<?=$iva->id ?>" class="btn btn-info" role="button">Show</a>
                                 <a href="router.php?c=iva&a=edit&id=<?=$iva->id ?>" class="btn btn-info" role="button">Edit</a>
                                 <a href="router.php?c=iva&a=destroy&id=<?=$iva->id ?>" class="btn btn-warning" role="button">Delete</a>

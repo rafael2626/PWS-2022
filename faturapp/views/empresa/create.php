@@ -2,32 +2,47 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col">
-                <form action="router.php?c=produto&a=store" method="post" >
-                <h3>Registar novo produto</h3>
-                <br>
-                <label for="referencia">Referencia</label>
-                <input  type="text" name="referencia" id="referencia" class="form-control"
-                <?= isset($produto->errors) ? $produto->errors->on('referencia') : '' ?>
+                <h3>Criar empresa</h3>
+                <form action="./router.php?c=empresa&a=update&id=<?= $empresa->id ?>" method="post">
+                    <label for="designacaosocial">Designação social </label>
+                    <input type="text" name="designacaosocial" id="designacaosocial" class="form-control" value="<?= $empresa->designacaosocial ?>"
+                    <?= isset($empresa->errors) ? ($empresa->errors)->on('designacaosocial') : '' ?>
 
-                <label for="total">Descrição </label>
-                <input type="text" name="descricao" id="descricao" class="form-control"
-                <?= isset($produto->errors) ? $produto ->errors->on('descricao') : '' ?>
+                    <label for="email">email: </label>
+                    <input type="text" name="email" id="email" class="form-control"  value="<?= $empresa->email ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('email') : '' ?>
 
-                <label for="preco">Preço: </label>
-                <input type="text" name="preco" id="preco" class="form-control" maxlength="13"
-                <?= isset($produto->errors) ? $produto->errors->on('preco') : '' ?>
+                    <label for="telefone">Stock</label>
+                    <input type="text" name="telefone" id="sttelefoneock" class="form-control"  value="<?= $empresa->telefone ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('telefone') : '' ?>
 
 
-                <label for="data">Stock:</label>
-                <input type="text" name="stock" id="stock" class="form-control"
-                <?= isset($produto->errors) ? $produto->errors->on('stock') : '' ?>
-                <br>
-                <br>
-                <br>
-                <br>
-                <input type="submit" class="btn btn-success mt-2" value="Criar Produto">
-                    <a href="./router.php?c=produto&a=index">Cancelar</a>
+                    <label for="nif">Preço </label>
+                    <input type="text" name="nif" id="nif" class="form-control"  value="<?= $empresa->nif ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('nif') : '' ?>
+
+                    <label for="morada">Iva</label>
+                    <input type="text" name="morada" id="morada" class="form-control"  value="<?= $empresa->morada ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('morada') : '' ?>
+
+                    <label for="codigopostal">codigopostal</label>
+                    <input type="text" name="codigopostal" id="codigopostal" class="form-control"  value="<?= $empresa->codigopostal ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('codigopostal') : '' ?>
+
+                    <label for="localidade">localidade</label>
+                    <input type="text" name="localidade" id="localidade" class="form-control"  value="<?= $empresa->localidade ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('localidade') : '' ?>
+
+
+                    <label for="capital">capitalsocial</label>
+                    <input type="text" name="capitalsocial" id="capitalsocial" class="form-control"  value="<?= $empresa->capitalsocial ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('capitalsocial') : '' ?>
+
+
+                    <input type="submit" class="btn btn-success mt-2" value="Criar empresa">
                 </form>
+                <br>
+                <a href="./router.php?c=empresa&a=index"><button class="btn btn-danger">Cancelar</button></a>
             </div>
         </div>
     </div>

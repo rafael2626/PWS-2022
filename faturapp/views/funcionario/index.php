@@ -1,10 +1,10 @@
 <?php require_once './views/layout/funcheader.php'; ?>
     <div class="container">
-        <h2 class="text-left top-space">Book Index</h2>
+        <h2 class="text-left top-space">Funcionario Index</h2>
         <h2 class="top-space"></h2>
         <div class="row">
             <div class="col-sm-6">
-                <h3>Create a new Book</h3>
+                <h3>Create a new User</h3>
                 <p>
                     <a href="router.php?c=funcionario&a=create" class="btn btn-info" role="button">New</a>
                 </p>
@@ -57,7 +57,6 @@
                         <td>
 
 
-                                <a href="router.php?c=funcionario&a=index&id=<?=$user->id?>" class="btn btn-info" role="button">Chapters</a>
                                 <a href="router.php?c=funcionario&a=show&id=<?=$user->id ?>" class="btn btn-info" role="button">Show</a>
                                 <a href="router.php?c=funcionario&a=edit&id=<?=$user->id ?>" class="btn btn-info" role="button">Edit</a>
                                 <a href="router.php?c=funcionario&a=destroy&id=<?=$user->id ?>" class="btn btn-warning" role="button">Delete</a>

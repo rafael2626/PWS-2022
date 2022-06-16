@@ -51,7 +51,7 @@
                     <?= isset($users->errors) ? $users->errors->on('localidade') : '' ?>
 
                     <br>
-                   <button type="submit" class="btn btn-danger">Registar Funcionario</button>
+                   <button type="submit" class="btn btn-success">Registar Funcionario</button>
                 </form>
             </div>
             <div class="col"></div>

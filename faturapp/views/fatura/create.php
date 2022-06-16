@@ -38,9 +38,9 @@
                 <br>
                 <br>
                 <br>
-                <a href="router.php?c=fatura&a=index"><button class="btn btn-info">Registar Fatura</button></a>
+                <a href="router.php?c=fatura&a=index"><button class="btn btn-success">Registar Fatura</button></a>
 
-                <a href="./router.php?c=fatura&a=index"><button class="btn btn-info">Cancelar</button></a>
+                <a href="./router.php?c=fatura&a=index"><button class="btn btn-danger">Cancelar</button></a>
             </div>
         </div>
     </div>

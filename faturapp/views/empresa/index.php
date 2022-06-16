@@ -16,7 +16,7 @@
         <div class="row">
 
             <div class="col-sm-6">
-                <h3>Criar Novo Produto</h3>
+                <h3>Criar Nova Empresa</h3>
                 <p>
                     <a href="router.php?c=empresa&a=create" class="btn btn-info" role="button">New</a>
                 </p>
@@ -67,7 +67,6 @@
                             <td>
 
 
-                                <a href="router.php?c=empresa&a=index&id=<?=$empresa->id?>" class="btn btn-info" role="button">empresa</a>
                                 <a href="router.php?c=empresa&a=show&id=<?=$empresa->id ?>" class="btn btn-info" role="button">Show</a>
                                 <a href="router.php?c=empresa&a=edit&id=<?=$empresa->id ?>" class="btn btn-info" role="button">Edit</a>
                                 <a href="router.php?c=empresa&a=destroy&id=<?=$empresa->id ?>" class="btn btn-warning" role="button">Delete</a>

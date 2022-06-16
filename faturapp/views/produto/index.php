@@ -59,7 +59,6 @@
                             <td>
 
 
-                                <a href="router.php?c=produto&a=index&id=<?=$produto->id?>" class="btn btn-info" role="button">Produtos</a>
                                 <a href="router.php?c=produto&a=show&id=<?=$produto->id ?>" class="btn btn-info" role="button">Show</a>
                                 <a href="router.php?c=produto&a=edit&id=<?=$produto->id ?>" class="btn btn-info" role="button">Edit</a>
                                 <a href="router.php?c=produto&a=destroy&id=<?=$produto->id ?>" class="btn btn-warning" role="button">Delete</a>

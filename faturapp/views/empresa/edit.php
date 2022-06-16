@@ -25,6 +25,19 @@
                     <input type="text" name="morada" id="morada" class="form-control"  value="<?= $empresa->morada ?>"
                     <?= isset($empresa->errors) ? $empresa->errors->on('morada') : '' ?>
 
+                    <label for="codigopostal">codigopostal</label>
+                    <input type="text" name="codigopostal" id="codigopostal" class="form-control"  value="<?= $empresa->codigopostal ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('codigopostal') : '' ?>
+
+                    <label for="localidade">localidade</label>
+                    <input type="text" name="localidade" id="localidade" class="form-control"  value="<?= $empresa->localidade ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('localidade') : '' ?>
+
+
+                    <label for="capital">capitalsocial</label>
+                    <input type="text" name="capitalsocial" id="capitalsocial" class="form-control"  value="<?= $empresa->capitalsocial ?>"
+                    <?= isset($empresa->errors) ? $empresa->errors->on('capitalsocial') : '' ?>
+
 
                     </select>
                     <input type="submit" class="btn btn-success mt-2" value="Guardar empresa">

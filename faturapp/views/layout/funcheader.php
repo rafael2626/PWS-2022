@@ -80,10 +80,10 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Taxas e Ivas
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">  Ivas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./router.php?c=iva&a=index">Taxas e Ivas</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=iva&a=index">Ivas</a></li>
                     </ul>
                     </a>
                 </li>
@@ -91,7 +91,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Atualizar Dados
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./router.php?c=funcionario&a=show">Ver Cliente</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=funcionario&a=index">Atualizar password</a></li>
                         <li><a class="dropdown-item" href="./router.php?c=funcionario&a=create">Criar Cliente</a></li>
                     </ul>
 

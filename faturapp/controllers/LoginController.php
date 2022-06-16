@@ -18,7 +18,7 @@ class LoginController extends BaseController
                         $this->redirectToRoute('funcionario', 'index');
                         break;
                     case 'cliente':
-                        $this->redirectToRoute('site', 'index');
+                        $this->redirectToRoute('cliente', 'index');
                         break;
                     default:
                         $this->redirectToRoute('login', 'getlogin');

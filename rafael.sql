@@ -71,6 +71,8 @@ CREATE TABLE IF NOT EXISTS `faturas` (
   KEY `fk_funcionario_idx` (`funcionario_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+select * from faturas;
+
 -- --------------------------------------------------------
 
 --
@@ -82,9 +84,9 @@ CREATE TABLE IF NOT EXISTS `ivas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `percentagem` int(2) NOT NULL,
   `descricao` varchar(50) NOT NULL,
-  `vigor` tinyint(1) NOT NULL,
+  `vigor` int(2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `ivas`
@@ -94,7 +96,7 @@ INSERT INTO `ivas` (`id`, `percentagem`, `descricao`, `vigor`) VALUES
 (1, 23, 'Taxa Normal', 1),
 (2, 13, 'Taxa Intermédia', 1),
 (3, 6, 'Taxa Reduzida', 1),
-(4, 20, 'Taxa especial', 0);
+(4, 20, 'Taxa especial', 1);
 
 -- --------------------------------------------------------
 
@@ -114,6 +116,8 @@ CREATE TABLE IF NOT EXISTS `linhafaturas` (
   KEY `fk_fatura_idx` (`fatura_id`),
   KEY `fk_produto_idx` (`produto_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 
 -- --------------------------------------------------------
 
@@ -138,16 +142,16 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `referencia`, `descricao`, `stock`, `preco`, `iva_id`) VALUES
-(1, 12345, 'processador', 4, 80, NULL),
-(2, 54321, 'gráfica', 10, 120, NULL),
-(3, 67293, 'motherboard', 8, 100, NULL),
-(4, 19273, 'rato', 25, 30, NULL),
-(5, 25183, 'teclado', 40, 40, NULL),
-(6, 52713, 'tapete', 55, 15, NULL),
-(7, 18273, 'memória ram', 32, 40, NULL),
-(8, 63723, 'caixa', 18, 35, NULL),
-(9, 23138, 'cooler', 43, 23, NULL),
-(10, 35212, 'fonte de alimentação', 14, 35, NULL);
+(1, 12345, 'processador', 4, 80, 1),
+(2, 54321, 'gráfica', 10, 120, 2),
+(3, 67293, 'motherboard', 8, 100, 3),
+(4, 19273, 'rato', 25, 30, 1),
+(5, 25183, 'teclado', 40, 40, 2),
+(6, 52713, 'tapete', 55, 15, 3),
+(7, 18273, 'memória ram', 32, 40, 1),
+(8, 63723, 'caixa', 18, 35, 2),
+(9, 23138, 'cooler', 43, 23, 3),
+(10, 35212, 'fonte de alimentação', 14, 35, 3);
 
 -- --------------------------------------------------------
 
@@ -177,13 +181,13 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `telefone`, `nif`, `morada`, `codigopostal`, `localidade`, `role`, `empresa_id`) VALUES
-(1, 'rafa', '123', 'rafa@gmail.com', 987222222, 241593271, 'Rua do Mosteiro nº23', '2304-231', 'Bemposta', 'cliente', NULL),
-(2, 'joao', '123', 'joao@gmail.com', 968279555, 212348123, 'Travessa do Leitão nº2', '3421-123', 'boavista', 'cliente', NULL),
-(3, 'tiago', '123', 'tiago@gmail.com', 987654321, 222912123, 'Oliveira dos Nomes nº2', '2341-234', 'alcobaca', 'cliente', NULL),
-(4, 'miguel', '1234', 'miguel@gmail.com', 932165478, 271231123, 'Largo do Tonto', '4590-123', 'maiorga', 'funcionario', NULL),
-(5, 'nuno', '123', 'nuno@gmail.com', 931245678, 231958573, 'Rua do Pinhão', '1932-123', 'nazare', 'admin', NULL),
-(6, 'gui', '123', 'gui.naosei@homtail.com', 912389523, 228361745, 'Venda das Raparigas', '2133-123', 'Santarém', 'funcionario', NULL);
-
+(1, 'rafa', '123', 'rafa@gmail.com', 987222222, 241593271, 'Rua do Mosteiro nº23', '2304-231', 'Bemposta', 'cliente', 1),
+(2, 'joao', '123', 'joao@gmail.com', 968279555, 212348123, 'Travessa do Leitão nº2', '3421-123', 'boavista', 'cliente', 1),
+(3, 'tiago', '123', 'tiago@gmail.com', 987654321, 222912123, 'Oliveira dos Nomes nº2', '2341-234', 'alcobaca', 'cliente', 1),
+(4, 'miguel', '1234', 'miguel@gmail.com', 932165478, 271231123, 'Largo do Tonto', '4590-123', 'maiorga', 'funcionario', 1),
+(5, 'nuno', '123', 'nuno@gmail.com', 931245678, 231958573, 'Rua do Pinhão', '1932-123', 'nazare', 'admin', 1),
+(6, 'gui', '123', 'gui.naosei@homtail.com', 912389523, 228361745, 'Venda das Raparigas', '2133-123', 'Santarém', 'funcionario', 1),
+(7, 'dario', '123', 'dario@homtail.com', 912389523, 228361745, 'rua123', '2133-123', 'etubal', 'cliente', 1);
 --
 -- Restrições para despejos de tabelas
 --

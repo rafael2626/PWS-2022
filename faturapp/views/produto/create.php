@@ -25,8 +25,9 @@
                 <br>
                 <br>
                 <br>
-                <input type="submit" class="btn btn-success mt-2" value="Criar Produto">
-                    <a href="./router.php?c=produto&a=index">Cancelar</a>
+
+                    <input type="submit" class="btn btn-success mt-2" value="Criar Produto">
+                    <a href="./router.php?c=produto&a=index" class="btn btn-danger">Cancelar</a>
                 </form>
             </div>
         </div>

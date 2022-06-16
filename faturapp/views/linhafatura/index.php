@@ -39,7 +39,6 @@
                             <td>
 
 
-                                <a href="router.php?c=linhafatura&a=index&id=<?=$linhafatura->id?>" class="btn btn-info" role="button">Produtos</a>
                                 <a href="router.php?c=linhafatura&a=show&id=<?=$linhafatura->id ?>" class="btn btn-info" role="button">Show</a>
                                 <a href="router.php?c=linhafatura&a=edit&id=<?=$linhafatura->id ?>" class="btn btn-info" role="button">Edit</a>
                                 <a href="router.php?c=linhafatura&a=destroy&id=<?=$linhafatura->id ?>" class="btn btn-warning" role="button">Delete</a>

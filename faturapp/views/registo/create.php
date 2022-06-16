@@ -63,7 +63,7 @@
                         ?>
                     </select>
 
-                <button class="btn btn-danger" type="submit">Registar Funcionario</button>
+                <button class="btn btn-success" type="submit">Registar Funcionario</button>
                 </form>
             </div>
             <div class="col"></div>
