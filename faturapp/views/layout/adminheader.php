@@ -22,14 +22,12 @@
                     if(isset($username))
                     {
                         ?>
-                        <a class="nav-link" href="./router.php?c=login&a=logout">Logout (<?= $username ?>)</a>
+                        <a class="nav-link" href="./router.php?c=login&a=logout">Logout </a>
                         <?php
                     }
                     else
                     {
-                        ?>
-                        <a class="nav-link" href="./router.php?c=login&a=index">Login</a>
-                        <?php
+                       
                     }
                     ?>
                 </li>

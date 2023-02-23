@@ -102,6 +102,8 @@ class FuncionarioController extends  BaseController
     }
     public function show($id)
     {
+
+
         try{
             $funcionario = User::find([$id]);
             $this->renderView("funcionario/show", ['funcionario' => $funcionario]);
@@ -111,15 +113,6 @@ class FuncionarioController extends  BaseController
             $this->redirectToRoute("error", "index", ['callbackRoute' => 'funcionario/index']);
         }
     }
-
-    public function funcheader($id)
-    {
-            $funcionario = User::find([$id]);
-            $this->renderView("layout/funcheader", ['funcionario' => $funcionario]);
-
-
-    }
-
     public function destroy($id)
     {
 

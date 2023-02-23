@@ -19,11 +19,10 @@
                 <li class="nav-item">
 
                     <?php
-
                     if(isset($username))
                     {
                         ?>
-                        <a class="nav-link" href="./router.php?c=login&a=logout">Logout (<?= $username ?>)</a>
+                        <a class="nav-link" href="./router.php?c=login&a=logout">Logout </a>
                         <?php
                     }
                     else
@@ -49,15 +48,7 @@
                         Faturas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./router.php?c=fatura&a=show&id=
-                        <?php
-                            if(isset($id))
-                            {
-                                ?>
-<?= $id?>
-                            <?php
-                            }
-                            ?>">Ver faturas</a></li>
+                        <li><a class="dropdown-item" href="./router.php?c=fatura&a=index">Ver faturas</a></li>
 
                 </li>
             </ul>

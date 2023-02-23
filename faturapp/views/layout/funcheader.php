@@ -18,8 +18,6 @@
                 </li>
                 <li class="nav-item">
                     <?php
-
-
                     if(isset($username))
                     {
                         ?>

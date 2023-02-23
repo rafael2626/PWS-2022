@@ -12,9 +12,6 @@
                     else
                     {
                         ?>
-
-
-
                             <h1>E-Fatura</h1>
                         ID da Fatura: <?= $fatura->id ?><br>
                         Valor: <?= $fatura->valor?><br>
